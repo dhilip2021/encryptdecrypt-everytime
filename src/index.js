@@ -1,5 +1,6 @@
-import urlEncoder from './enCrypt'
-import urlDecoder from './deCrypt'
+// const urlDecoder = require('./deCrypt')
+const {urlEncoder} = require("./enCrypt");
+const {urlDecoder} = require("./deCrypt");
 
 
-export {urlEncoder as urlEncoder, urlDecoder as urlDecoder}
+module.exports = {urlEncoder,urlDecoder}
