@@ -1,5 +1,5 @@
 #### Example
-
+```javascript
 
 import { urlEncoder,urlDecoder } from "encryptdecrypt-everytime/src";
 
@@ -17,6 +17,7 @@ const secretKey = "Some secret Key"
 <b>For encrypting the data :</b>
 
 const encryptedResults = urlEncoder(secretKey,JSON.stringify(sampleData));
+<br/>
 
 // Encoded Response
 console.log(encryptedResults,"<<<<<<<<< encode response");
@@ -25,6 +26,9 @@ console.log(encryptedResults,"<<<<<<<<< encode response");
 <b>For Decrypting the data :</b>
 
 const decryptedResults = urlDecoder(secretKey,encryptedResults);
+<br/>
 
 // Decoded Response
 console.log(JSON.parse(decryptedResults),"<<<<<<<<< decode response");
+
+```
