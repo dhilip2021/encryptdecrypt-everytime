@@ -1,35 +1,30 @@
------------
-
-import  { urlEncoder,urlDecoder } from "encryptdecrypt-everytime/src";
+#### Example
 
 
+import { urlEncoder,urlDecoder } from "encryptdecrypt-everytime/src";
 
-const sampleData = {
-    id : 1,
-    name : "David",
-    age : 2
-}
+const sampleData = [
+		{ id: 1 }, 
+		{ id: 2 }, 
+		{ id: 3 }
+	];
 <br/>
+
 const secretKey = "Some secret Key"
+<br/>
+
 
 <b>For encrypting the data :</b>
 
-const encryptedData =  urlEncoder(secretKey,JSON.stringify(sampleData));
+const encryptedResults = urlEncoder(secretKey,JSON.stringify(sampleData));
 
-Note : Input should be in the form of string;
-
-
-<b>For decrypting the data :</b>
-
-let decryptedData = urlDecoder(secretKey,encryptedData)
-
-const decryptedData = JSON.parse(decryptedData)
+// Encoded Response
+console.log(encryptedResults,"<<<<<<<<< encode response");
 
 
+<b>For Decrypting the data :</b>
 
+const decryptedResults = urlDecoder(secretKey,encryptedResults);
 
-
-
-
-
-
+// Decoded Response
+console.log(JSON.parse(decryptedResults),"<<<<<<<<< decode response");
