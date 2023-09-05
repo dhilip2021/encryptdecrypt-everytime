@@ -8,25 +8,18 @@ const sampleData = [
 		{ id: 2 }, 
 		{ id: 3 }
 	];
-<br/>
-
-const secretKey = "Some secret Key"
-<br/>
+const secretKey = "Some secret Key";
 
 
-<b>For encrypting the data :</b>
-
+// For encrypting the method
 const encryptedResults = urlEncoder(secretKey,JSON.stringify(sampleData));
-<br/>
 
 // Encoded Response
 console.log(encryptedResults,"<<<<<<<<< encode response");
 
 
-<b>For Decrypting the data :</b>
-
+// For Decrypting the method 
 const decryptedResults = urlDecoder(secretKey,encryptedResults);
-<br/>
 
 // Decoded Response
 console.log(JSON.parse(decryptedResults),"<<<<<<<<< decode response");
